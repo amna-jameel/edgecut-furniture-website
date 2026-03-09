@@ -602,7 +602,12 @@ textarea {
     width: 300px;
   }
   .price {
-    gap: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    width: 100%;
   }
 
   /* About */
@@ -721,7 +726,10 @@ textarea {
     text-align: center;
   }
   .hero-head {
-    font-size: 20px;
+    font-size: 26px;
+  }
+  .hero-para {
+    font-size: 15px;
   }
   .hero-img {
     height: 220px;
@@ -743,7 +751,10 @@ textarea {
     margin-top: 50px;
   }
   .furn-head {
-    font-size: 22px;
+    font-size: 26px;
+  }
+  .furn-para {
+    font-size: 15px;
   }
   .container {
     flex-direction: column;
@@ -752,15 +763,23 @@ textarea {
   }
   .card {
     width: 100%;
-    max-width: 340px;
+    max-width: 360px;
     height: auto;
     padding-bottom: 20px;
   }
   .card-des {
+    font-size: 17px;
     padding-top: 20px;
   }
+  /* Fix price row: price left, Buy Now right — same as desktop */
   .price {
-    gap: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+    margin-top: 10px;
   }
 
   /* About */
@@ -775,7 +794,10 @@ textarea {
     height: 200px;
   }
   .about-head {
-    font-size: 22px;
+    font-size: 26px;
+  }
+  .about-para {
+    font-size: 15px;
   }
 
   /* Blog */
@@ -795,7 +817,13 @@ textarea {
     object-fit: cover;
   }
   .blog-head {
-    font-size: 22px;
+    font-size: 26px;
+  }
+  .blog-name {
+    font-size: 20px;
+  }
+  .blog-des {
+    font-size: 15px;
   }
 
   /* Testimonial */
@@ -807,7 +835,13 @@ textarea {
     padding: 25px 20px;
   }
   .test-head {
-    font-size: 22px;
+    font-size: 26px;
+  }
+  .client-name {
+    font-size: 20px;
+  }
+  .client-para {
+    font-size: 15px;
   }
 
   /* Contact */
@@ -821,11 +855,12 @@ textarea {
     align-items: center;
   }
   .contact-head {
-    font-size: 22px;
+    font-size: 26px;
   }
   input,
   textarea {
     width: 100%;
+    font-size: 15px;
   }
   .contact-container iframe {
     width: 100%;
@@ -852,6 +887,15 @@ textarea {
   }
   .footer-links-main {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+  }
+  .footer-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
   }
   .footer-icons {
     justify-content: center;
@@ -861,17 +905,17 @@ textarea {
     max-width: 280px;
   }
   .footer-head {
-    font-size: 18px;
+    font-size: 20px;
+  }
+  .f-link {
+    font-size: 15px;
   }
 }
 
 /* --- Small mobile: up to 400px --- */
 @media (max-width: 400px) {
   .hero-head {
-    font-size: 17px;
-  }
-  .hero-img {
-    height: 180px;
+    font-size: 22px;
   }
   .hero-para,
   .about-para,
@@ -880,26 +924,35 @@ textarea {
   .furn-para {
     font-size: 14px;
   }
+  .hero-img {
+    height: 180px;
+  }
   .Contact-btn,
   .about-btn {
-    width: 120px;
-    height: 42px;
-    font-size: 13px;
+    width: 130px;
+    height: 44px;
+    font-size: 15px;
   }
   .furn-head,
   .about-head,
   .blog-head,
   .test-head,
   .contact-head {
-    font-size: 19px;
+    font-size: 22px;
   }
   .card-des {
     font-size: 15px;
   }
+  .price {
+    font-size: 14px;
+  }
   .blog-name {
-    font-size: 17px;
+    font-size: 18px;
   }
   .client-name {
+    font-size: 18px;
+  }
+  .footer-head {
     font-size: 18px;
   }
 }
