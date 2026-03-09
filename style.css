@@ -107,7 +107,6 @@ a {
   height: 49px;
   width: 170px;
   border: 1px solid transparent;
-  /* font-weight: bold; */
   font-size: 18px;
   border-radius: 2px;
   cursor: pointer;
@@ -124,7 +123,6 @@ a {
   height: 49px;
   width: 170px;
   border: 1px solid transparent;
-  /* font-weight: bold; */
   font-size: 18px;
   border-radius: 2px;
   cursor: pointer;
@@ -227,9 +225,7 @@ span {
   color: white;
   height: 49px;
   width: 170px;
-  /* padding: 10px 30px; */
   border: 1px solid transparent;
-  /* font-weight: bold; */
   font-size: 18px;
   border-radius: 2px;
   cursor: pointer;
@@ -247,7 +243,6 @@ span {
 .blog-head {
   text-align: center;
   color: rgb(16, 16, 16);
-
   text-transform: uppercase;
   font-size: 35px;
   font-weight: 700;
@@ -265,7 +260,6 @@ span {
 .blog-card {
   width: 360px;
   height: 470px;
-  /* border: 0px solid transparent; */
   border-radius: 2px;
   box-shadow: 0px 0px 7px rgb(227, 227, 227);
   transition: transform 0.25s ease;
@@ -300,7 +294,6 @@ span {
   color: white;
   padding: 13px 34px;
   border: 1px solid transparent;
-  /* font-weight: bold; */
   font-size: 17px;
   border-radius: 2px;
   cursor: pointer;
@@ -315,7 +308,6 @@ span {
 .test-head {
   text-align: center;
   color: rgb(16, 16, 16);
-
   text-transform: uppercase;
   font-size: 35px;
   font-weight: 700;
@@ -402,7 +394,6 @@ textarea {
 }
 .contact-head {
   color: rgb(16, 16, 16);
-
   text-transform: uppercase;
   font-size: 35px;
   font-weight: 700;
@@ -450,7 +441,6 @@ textarea {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
   align-items: start;
   margin-top: 80px;
   text-align: start;
@@ -530,4 +520,386 @@ textarea {
   padding: 30px;
   font-size: 17px;
   text-align: center;
+}
+
+/* ============================================================
+   RESPONSIVE MEDIA QUERIES
+   Original styles above are untouched. All responsive overrides below.
+   ============================================================ */
+
+/* --- Hamburger menu (hidden on desktop) --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  margin-right: 20px;
+  z-index: 1000;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 26px;
+  background-color: #000;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  color: transparent;
+  font-size: 0;
+}
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- Tablet: 768px – 1024px --- */
+@media (max-width: 1024px) {
+  .main {
+    height: auto;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+  }
+  .logo {
+    margin-left: 10px;
+    font-size: 24px;
+  }
+  .child2 {
+    gap: 18px;
+    font-size: 14px;
+  }
+  .child3 {
+    margin-right: 10px;
+  }
+
+  /* Hero */
+  .hero-section {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 30px 25px;
+    gap: 20px;
+  }
+  .hero-head {
+    font-size: 28px;
+  }
+  .hero-img {
+    height: 270px;
+  }
+
+  /* Furniture */
+  .furnitures {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    width: 300px;
+  }
+  .price {
+    gap: 80px;
+  }
+
+  /* About */
+  .about-section {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 40px 25px;
+    gap: 20px;
+  }
+  .about-img {
+    height: 230px;
+  }
+
+  /* Blog */
+  .blog-container {
+    flex-wrap: wrap;
+  }
+
+  /* Testimonial */
+  .test-container {
+    width: 90%;
+  }
+
+  /* Contact */
+  .contact {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .contact-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  .contact-card {
+    width: 100%;
+    max-width: 560px;
+  }
+  input,
+  textarea {
+    width: 100%;
+    max-width: 560px;
+    font-size: 16px;
+  }
+  .contact-container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 420px;
+  }
+
+  /* Footer */
+  .footer {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 40px 30px 60px;
+  }
+  .footer-contact {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .footer-container {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .f-input {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+/* --- Mobile: up to 767px --- */
+@media (max-width: 767px) {
+  /* Navbar */
+  .main {
+    position: relative;
+    height: auto;
+    padding: 15px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    margin-left: 5px;
+    font-size: 22px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .child2 {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 20px;
+    gap: 16px;
+    z-index: 999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-size: 15px;
+  }
+  .child2.open {
+    display: flex;
+  }
+  .child3 {
+    margin-right: 5px;
+    gap: 6px;
+  }
+
+  /* Hero */
+  .hero-section {
+    flex-direction: column;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 25px 20px;
+    text-align: center;
+  }
+  .hero-head {
+    font-size: 20px;
+  }
+  .hero-img {
+    height: 220px;
+  }
+  .hero-btns {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .Contact-btn,
+  .about-btn {
+    width: 140px;
+    font-size: 16px;
+  }
+
+  /* Furniture */
+  .furnitures {
+    margin-left: 12px;
+    margin-right: 12px;
+    margin-top: 50px;
+  }
+  .furn-head {
+    font-size: 22px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  .card {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .card-des {
+    padding-top: 20px;
+  }
+  .price {
+    gap: 40px;
+  }
+
+  /* About */
+  .about-section {
+    flex-direction: column;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 35px 20px;
+    text-align: center;
+  }
+  .about-img {
+    height: 200px;
+  }
+  .about-head {
+    font-size: 22px;
+  }
+
+  /* Blog */
+  .blog-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 12px;
+  }
+  .blog-card {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+  }
+  .blog-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .blog-head {
+    font-size: 22px;
+  }
+
+  /* Testimonial */
+  .test-container {
+    width: 92%;
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 20px;
+  }
+  .test-head {
+    font-size: 22px;
+  }
+
+  /* Contact */
+  .contact {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 20px 15px 40px;
+  }
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-head {
+    font-size: 22px;
+  }
+  input,
+  textarea {
+    width: 100%;
+  }
+  .contact-container iframe {
+    width: 100%;
+    height: 280px;
+  }
+
+  /* Footer */
+  .footer {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 30px 20px 50px;
+  }
+  .footer-contact {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    text-align: center;
+  }
+  .footer-links-main {
+    justify-content: center;
+  }
+  .footer-icons {
+    justify-content: center;
+  }
+  .f-input {
+    width: 100%;
+    max-width: 280px;
+  }
+  .footer-head {
+    font-size: 18px;
+  }
+}
+
+/* --- Small mobile: up to 400px --- */
+@media (max-width: 400px) {
+  .hero-head {
+    font-size: 17px;
+  }
+  .hero-img {
+    height: 180px;
+  }
+  .hero-para,
+  .about-para,
+  .blog-des,
+  .client-para,
+  .furn-para {
+    font-size: 14px;
+  }
+  .Contact-btn,
+  .about-btn {
+    width: 120px;
+    height: 42px;
+    font-size: 13px;
+  }
+  .furn-head,
+  .about-head,
+  .blog-head,
+  .test-head,
+  .contact-head {
+    font-size: 19px;
+  }
+  .card-des {
+    font-size: 15px;
+  }
+  .blog-name {
+    font-size: 17px;
+  }
+  .client-name {
+    font-size: 18px;
+  }
 }

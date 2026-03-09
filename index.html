@@ -25,12 +25,12 @@
         <div class="logo">
           <a class="logo" href="">Edgecut</a>
         </div>
-        <div class="child2">
+        <div class="child2" id="navLinks">
           <a class="nav-link" href="">Home</a>
-          <a class="nav-link" href="">About</a>
-          <a class="nav-link" href="">Furniture</a>
-          <a class="nav-link" href="">Blog</a>
-          <a class="nav-link" href="">Contact Us</a>
+          <a class="nav-link" href="#ourabout">About</a>
+          <a class="nav-link" href="#ourfurniture">Furniture</a>
+          <a class="nav-link" href="#ourblog">Blog</a>
+          <a class="nav-link" href="#ourcontact">Contact Us</a>
         </div>
         <div class="child3">
           <div class="login-btn">
@@ -38,6 +38,12 @@
             <i class="ri-user-fill"></i>
           </div>
           <i class="ri-search-line search"></i>
+          <!-- Hamburger icon (visible on mobile only) -->
+          <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
     </nav>
@@ -70,7 +76,7 @@
       </div>
     </section>
 
-    <section data-aos="fade-up" data-aos-duration="1000" class="furnitures">
+    <section data-aos="fade-up" data-aos-duration="1000" id="ourfurniture" class="furnitures">
       <h1 class="furn-head">Our Furniture Collection</h1>
       <p class="furn-para">
         A curated range of furniture pieces crafted with precision, comfort, and
@@ -136,7 +142,7 @@
       </div>
     </section>
 
-    <section data-aos="fade-up" data-aos-duration="1000" class="about-section">
+    <section data-aos="fade-up" data-aos-duration="1000" class="about-section" id="ourabout">
       <div class="hero-card">
         <img class="about-img" src="images/about-img.png" alt="about-img" />
       </div>
@@ -150,7 +156,7 @@
       </div>
     </section>
 
-    <section data-aos="fade-up" data-aos-duration="1000" class="blog">
+    <section data-aos="fade-up" data-aos-duration="1000" class="blog" id="ourblog">
       <h1 class="blog-head">Latest From Our Blog</h1>
 
       <div class="blog-container">
@@ -213,7 +219,7 @@
       <i class="fa-solid fa-arrow-right arrow-icon"></i>
     </section>
 
-    <section data-aos="fade-up" data-aos-duration="1000" class="contact">
+    <section data-aos="fade-up" data-aos-duration="1000" class="contact" id="ourcontact">
       <div class="contact-container">
         <div class="contact-card">
           <h1 class="contact-head">Contact Us</h1>
@@ -244,6 +250,7 @@
         </div>
       </div>
     </section>
+
     <section data-aos="fade-up" data-aos-duration="1000" class="footer">
       <div class="footer-contact">
         <div class="card1">
@@ -300,7 +307,6 @@
             id=""
           />
           <br />
-
           <button class="sub-btn">Subscribe</button>
           <div class="footer-icons">
             <i class="fa-brands fa-facebook-f f-icon"></i>
@@ -315,9 +321,25 @@
     <section class="copyright">
       <p>&copy; All rights reserved by Edgecut Furniture</p>
     </section>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+
+      function toggleMenu() {
+        const navLinks = document.getElementById("navLinks");
+        const hamburger = document.getElementById("hamburger");
+        navLinks.classList.toggle("open");
+        hamburger.classList.toggle("open");
+      }
+
+      // Close menu when a nav link is clicked
+      document.querySelectorAll(".nav-link").forEach(function (link) {
+        link.addEventListener("click", function () {
+          document.getElementById("navLinks").classList.remove("open");
+          document.getElementById("hamburger").classList.remove("open");
+        });
+      });
     </script>
   </body>
 </html>
